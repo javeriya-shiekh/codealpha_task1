@@ -1,0 +1,60 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+body{background:#000;color:#fff;overflow-x:hidden}
+a{text-decoration:none;color:#fff}
+
+/* NAV */
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 50px;position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(0,0,0,.6);backdrop-filter:blur(10px)}
+.logo{font-weight:900;letter-spacing:2px;font-size:18px}
+.logo span{color:#c8ff00}
+nav ul{display:flex;gap:28px;list-style:none;font-size:11px;letter-spacing:1px}
+nav ul li{cursor:pointer;opacity:.8}
+nav ul li:hover{opacity:1;color:#c8ff00}
+.menu-btn{display:none;font-size:24px;cursor:pointer}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;position:relative;padding:110px 50px 40px;overflow:hidden}
+.hero::before{content:'';position:absolute;width:900px;height:900px;border:1px solid rgba(255,255,255,.08);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%)}
+.hero::after{content:'';position:absolute;width:650px;height:650px;border:1px solid rgba(255,255,255,.08);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%)}
+.circle-3{position:absolute;width:420px;height:420px;border:1px solid rgba(255,255,255,.06);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%)}
+.dot{position:absolute;width:7px;height:7px;background:#eaff9a;border-radius:50%;top:32%;left:22%;box-shadow:0 0 15px #eaff9a}
+
+.big-text{font-size:clamp(80px,15vw,210px);font-weight:900;line-height:.9;letter-spacing:-2px;text-align:center;background:linear-gradient(to bottom,#fff 20%,#8a8fa3 70%,#3a3f4d 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;position:relative;z-index:1;white-space:nowrap}
+
+/* YOUR PHOTO - In front of PORTFOLIO text like example */
+.hero-img-wrap{margin:-70px auto 0;position:relative;z-index:2;text-align:center}
+.hero-img{width:360px;height:460px;object-fit:cover;object-position:top;mask-image:linear-gradient(to bottom, black 75%, transparent 100%);-webkit-mask-image:linear-gradient(to bottom, black 75%, transparent 100%);filter:drop-shadow(0 20px 30px rgba(0,0,0,.8))}
+
+.hero-bottom{display:flex;justify-content:space-between;align-items:flex-end;margin-top:10px;position:relative;z-index:4;flex-wrap:wrap;gap:20px}
+.hero-bottom h2{font-size:28px;line-height:1.1}
+.hero-bottom h2 i{font-family:'Playfair Display',serif;font-weight:400}
+.hero-bottom p{font-size:12px;opacity:.6;margin-top:6px}
+.contact-btns{display:flex;gap:10px;align-items:center}
+.circle-btn{width:42px;height:42px;border:1px solid rgba(255,255,255,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.btn{padding:10px 22px;border:1px solid rgba(255,255,255,.3);border-radius:30px;font-size:13px;font-style:italic}
+.btn:hover{background:#fff;color:#000}
+.available{font-size:10px;letter-spacing:1px;opacity:.5;margin-top:20px}
+.scroll{font-size:10px;letter-spacing:2px;opacity:.5;text-align:center;margin-top:20px}
+
+/* SECTIONS */
+section{padding:90px 50px;max-width:1100px;margin:auto}
+h3{font-size:32px;margin-bottom:12px}
+h3 span{color:#c8ff00}
+.sec-sub{opacity:.6;font-size:14px;margin-bottom:35px;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#111;border:1px solid #222;padding:28px;border-radius:18px;transition:.3s}
+.card:hover{transform:translateY(-5px);border-color:#c8ff00}
+.card h4{margin-bottom:10px}
+.card p{font-size:14px;opacity:.7;line-height:1.6}
+.tag{display:inline-block;background:#222;padding:5px 12px;border-radius:20px;font-size:11px;margin:5px 5px 0 0}
+.link{color:#c8ff00;font-size:13px;display:inline-block;margin-top:15px}
+.skills{display:flex;flex-wrap:wrap;gap:10px}
+.skill{background:#fff;color:#000;padding:10px 18px;border-radius:30px;font-weight:600;font-size:14px}
+input,textarea{width:100%;padding:14px;background:#111;border:1px solid #222;color:#fff;border-radius:10px;margin-bottom:15px;outline:none}
+button.send{background:#c8ff00;color:#000;border:none;padding:14px 28px;border-radius:30px;font-weight:700;cursor:pointer;width:100%}
+footer{text-align:center;padding:30px;opacity:.5;font-size:12px;border-top:1px solid #222}
+
+@media(max-width:768px){
+nav{padding:18px 20px} nav ul{display:none;flex-direction:column;position:absolute;top:65px;left:0;right:0;background:#000;padding:20px} nav ul.show{display:flex} .menu-btn{display:block}
+.hero{padding:100px 20px 30px} .big-text{font-size:68px} .hero-img{width:280px;height:360px} .hero-img-wrap{margin-top:-35px}
+section{padding:60px 20px} .grid{grid-template-columns:1fr} .hero-bottom{flex-direction:column;align-items:flex-start}
+}

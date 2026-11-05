@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Javeria - Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <div class="logo">JAVERIA<span>.</span></div>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  <ul id="menu">
+    <li onclick="scrollToSec('home')">HOME</li>
+    <li onclick="scrollToSec('about')">ABOUT</li>
+    <li onclick="scrollToSec('services')">SERVICES</li>
+    <li onclick="scrollToSec('projects')">PROJECTS</li>
+    <li onclick="scrollToSec('experience')">EXPERIENCE</li>
+    <li onclick="scrollToSec('contact')">CONTACT</li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="home">
+  <div class="circle-3"></div>
+  <div class="dot"></div>
+  <h1 class="big-text">PORTFOLIO</h1>
+
+  <!-- YOUR IMAGE HERE -->
+  <div class="hero-img-wrap">
+    <img src="javeria.png" alt="Javeria - Front-End Developer" class="hero-img">
+  </div>
+
+  <div class="hero-bottom">
+    <div>
+      <h2>Front-End <i>Developer</i></h2>
+      <p>HTML • CSS • JavaScript • Tailwind CSS</p>
+    </div>
+    <div class="contact-btns">
+      <div class="circle-btn" onclick="scrollToSec('contact')">↙</div>
+      <a class="btn" href="#contact" onclick="scrollToSec('contact')">Contact</a>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <p class="available">● AVAILABLE FOR COLLABORATIONS</p>
+    <p class="scroll">SCROLL TO EXPLORE ↓</p>
+    <p style="font-size:12px;opacity:.5">Chat with Javeria →</p>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <h3>About <span>Me</span></h3>
+  <p class="sec-sub">Hi, I'm Javeria. A Front-End Website Developer from Karachi, Pakistan. I love turning ideas into beautiful, responsive and user-friendly websites. I focus on clean code, modern design and smooth user experience.</p>
+  <div class="skills">
+    <span class="skill">HTML5</span><span class="skill">CSS3</span><span class="skill">JavaScript</span><span class="skill">Tailwind CSS</span><span class="skill">Responsive Design</span><span class="skill">Git & GitHub</span>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <h3>My <span>Services</span></h3>
+  <p class="sec-sub">What I can build for you</p>
+  <div class="grid">
+    <div class="card"><h4>🌐 Website Development</h4><p>Modern, fast and mobile-friendly websites for business, portfolio and personal use.</p></div>
+    <div class="card"><h4>🎨 Landing Pages</h4><p>High-converting landing pages with clean UI, animations and call-to-action sections.</p></div>
+    <div class="card"><h4>📱 Responsive Design</h4><p>Websites that look perfect on mobile, tablet and desktop - no matter the screen size.</p></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h3>My <span>Projects</span></h3>
+  <p class="sec-sub">Some of my live work</p>
+  <div class="grid">
+    <div class="card">
+      <div style="height:160px;background:#1e1e1e;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:15px">Typing Speed Tester</div>
+      <h4>Typing Speed Tester</h4><p>Calculates WPM, accuracy and time in real-time with live color feedback.</p>
+      <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Tailwind</span><br>
+      <a class="link" href="https://typing-speed-tester-jz.netlify.app" target="_blank">View Live →</a>
+    </div>
+    <div class="card">
+      <div style="height:160px;background:#1e1e1e;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:15px">Booking Website</div>
+      <h4>Booking Service Website</h4><p>Complete booking landing page with services, pricing and contact form.</p>
+      <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Tailwind</span><span class="tag">JavaScript</span><br>
+      <a class="link" href="#" target="_blank">View Live →</a>
+    </div>
+    <div class="card">
+      <div style="height:160px;background:#1e1e1e;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:15px">Your Next Project</div>
+      <h4>Portfolio Website</h4><p>This portfolio itself - designed and coded with HTML, CSS and JavaScript.</p>
+      <span class="tag">Portfolio</span><span class="tag">UI Design</span><br>
+      <a class="link" href="#">View Live →</a>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <h3>My <span>Experience</span></h3>
+  <div class="grid">
+    <div class="card"><h4>Front-End Developer</h4><p><b>Freelance / Self-Learning</b><br><br>Building responsive websites and web apps. Working on landing pages and portfolio sites.</p></div>
+    <div class="card"><h4>Currently Learning</h4><p><b>Full-Stack Development</b><br><br>Expanding skills in back-end development and Python to become a Full-Stack Developer.</p></div>
+    <div class="card"><h4>Tools I Use</h4><p>VS Code, Git, GitHub, Netlify, GitHub Pages, Chrome DevTools, Canva for design ideas.</p></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h3>Let's <span>Work Together</span></h3>
+  <p class="sec-sub">Have a project? Send me a message.</p>
+  <input type="text" id="name" placeholder="Your Name">
+  <input type="email" id="email" placeholder="Your Email">
+  <textarea rows="4" id="msg" placeholder="Your Message"></textarea>
+  <button class="send" onclick="sendMsg()">Send Message</button>
+  <p id="success" style="text-align:center;color:#c8ff00;margin-top:15px;display:none">Message sent! I will reply soon ❤️</p>
+</section>
+
+<footer>© 2026 Javeria - Front-End Developer | Made with HTML, CSS & JS</footer>
+<script src="./app.js"></script>
+</body>
+</html>
